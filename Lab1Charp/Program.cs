@@ -10,6 +10,7 @@ class Program
         Task2();
         Task3();
         Task4();
+        Task5();
     }
 
     static void Task1()
@@ -100,5 +101,25 @@ class Program
 
         // Виведення результату
         Console.WriteLine("До кінця місяця залишилося {0} днів.", daysLeftInMonth);
+    }
+
+    static void Task5()
+    {
+        // Введення двох цілих чисел від користувача
+        Console.WriteLine("Введіть два цілих числа:");
+        Console.Write("a = ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("b = ");
+        int b = int.Parse(Console.ReadLine());
+
+        // Виклик функції для обчислення різниці між числами та виведення результату
+        int difference = CalculateDifference(a, b);
+        Console.WriteLine("Різниця між числами: " + difference);
+    }
+
+    // Функція для обчислення різниці між двома цілими числами
+    static int CalculateDifference(int a, int b)
+    {
+        return a - b;
     }
 }
