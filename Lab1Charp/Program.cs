@@ -11,6 +11,7 @@ class Program
         Task3();
         Task4();
         Task5();
+        Task6();
     }
 
     static void Task1()
@@ -115,6 +116,23 @@ class Program
         // Виклик функції для обчислення різниці між числами та виведення результату
         int difference = CalculateDifference(a, b);
         Console.WriteLine("Різниця між числами: " + difference);
+    }
+
+    static void Task6()
+    {
+        // Зчитування значення x з клавіатури
+        Console.WriteLine("Введіть значення x:");
+        double x = double.Parse(Console.ReadLine());
+
+        // Зчитування значення y з клавіатури
+        Console.WriteLine("Введіть значення y:");
+        double y = double.Parse(Console.ReadLine());
+
+        // Обчислення виразу
+        double result = ((1 / (x * y)) + (1 / (x * x + 1))) * (x + y);
+
+        // Виведення результату
+        Console.WriteLine("Результат виразу: " + result);
     }
 
     // Функція для обчислення різниці між двома цілими числами
