@@ -8,6 +8,7 @@ class Program
 
         Task1();
         Task2();
+        Task3();
     }
 
     static void Task1()
@@ -50,6 +51,34 @@ class Program
         else
         {
             Console.WriteLine("Число {0} не є парним.", number);
+        }
+    }
+
+    static void Task3()
+    {
+        // Задані координати центру півкола та радіус
+        double centerX = 0;
+        double centerY = 0;
+        double radius = 9;
+
+        // Введення координат точки від користувача
+        Console.WriteLine("Введіть координати точки (x, y):");
+        Console.Write("x = ");
+        double x = double.Parse(Console.ReadLine());
+        Console.Write("y = ");
+        double y = double.Parse(Console.ReadLine());
+
+        // Перевірка, чи потрапляє точка в півколо
+        bool isInSemicircle = x >= centerX && y >= centerY && Math.Pow(x - centerX, 2) + Math.Pow(y - centerY, 2) <= Math.Pow(radius, 2);
+
+        // Виведення результату
+        if (isInSemicircle)
+        {
+            Console.WriteLine("Так");
+        }
+        else
+        {
+            Console.WriteLine("Ні");
         }
     }
 }
