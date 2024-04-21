@@ -9,6 +9,7 @@ class Program
         Task1();
         Task2();
         Task3();
+        Task4();
     }
 
     static void Task1()
@@ -80,5 +81,24 @@ class Program
         {
             Console.WriteLine("Ні");
         }
+    }
+
+    static void Task4()
+    {
+        // Введення порядкового номера дня місяця від користувача
+        Console.WriteLine("Введіть порядковий номер дня місяця:");
+        int dayOfMonth = int.Parse(Console.ReadLine());
+
+        // Визначення поточної дати
+        DateTime currentDate = DateTime.Now;
+
+        // Визначення кількості днів у місяці
+        int daysInMonth = DateTime.DaysInMonth(currentDate.Year, currentDate.Month);
+
+        // Визначення кількості днів, що залишилися до кінця місяця
+        int daysLeftInMonth = daysInMonth - dayOfMonth;
+
+        // Виведення результату
+        Console.WriteLine("До кінця місяця залишилося {0} днів.", daysLeftInMonth);
     }
 }
